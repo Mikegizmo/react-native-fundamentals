@@ -1,14 +1,19 @@
 // Using State and Props
 
 // useState is a hook that is a named export from React.
-import React from "react";
+import React, { useState } from "react";
 import { Text, Button, View } from "react-native";
 
 export default () => {
+  const [pressCount, setPressCount] = useState(0);
+
   return (
     <View style={{ alignItems: "center", marginTop: 20 }}>
-      <Text>You've pressed the button: ??? time(s)</Text>
-      <Button title="Press me" onPress={() => {}} />
+      <Text>You've pressed the button: {pressCount} time(s)</Text>
+      <Button 
+        title={`Pressed ${pressCount} time(s)`}
+        onPress={() => setPressCount(pressCount + 1)} 
+      />
     </View>
   );
 };

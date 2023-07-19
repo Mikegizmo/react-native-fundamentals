@@ -18,3 +18,23 @@
 // We need to export App/Component so it's rendered on the screen. To work in this example app you
 // need to use export default. Dont' worry about this right now, we'll talk about it later.
 // export default App;
+
+import React from "react";
+import { View, Text } from "react-native";
+
+const App = () => {
+  return (
+    <View style={{ 
+      backgroundColor: "blue", 
+      width: 100, 
+      height: 100, 
+      justifyContent: "center", 
+      alignItems: "center" 
+      }}
+    >
+      <Text style={{ color: "white" }}>Hello, World!</Text>
+    </View>
+  )
+}
+
+export default App;
